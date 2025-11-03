@@ -25,28 +25,26 @@ module miniALU(
     input logic [3:0] op2,
     input logic sign,
     input logic operation,
-    output logic [1:0] sign_op,
     output logic [19:0] result
     );
     
     always_comb begin
-    sign_op = (sign << 1) + operation;
-    case (sign_op)
-       2'b00: begin // addition
-          result = op1 + op2;
-       end
-       2'b01: begin // left shift 
-          result = op1 <<< op2;
-       end
-       2'b10: begin // subtraction
-          result = op1 - op2;
-       end
-       2'b11: begin // right shift arithmetic
-          result = op1 >>> op2;
-       end
-       default: begin // if none of the other cases match
-       end
-    endcase
+    if (operation == 1'b1) begin // shift
+        if (sign == 1'b1) begin // arithmetic right shift
+            result = {16'b0, op1} >>> op2;
+        end
+        else begin              // arithmetic left shift
+            result = {16'b0, op1} <<< op2;
+        end
+    end
+    else begin // add
+        if (sign == 1'b1) begin // subtract
+            result = {16'b0, op1} - {16'b0, op2};
+        end
+        else begin              // add
+            result = {16'b0, op1} + {16'b0, op2};
+        end
+    end
     
     end
 endmodule

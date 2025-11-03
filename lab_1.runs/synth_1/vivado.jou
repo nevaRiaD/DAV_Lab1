@@ -3,11 +3,11 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sun Nov  2 15:34:23 2025
-# Process ID         : 15536
+# Start of session at: Sun Nov  2 16:11:32 2025
+# Process ID         : 16296
 # Current directory  : C:/Users/LENOVO/Documents/Vivado/lab_1/lab_1.runs/synth_1
-# Command line       : vivado.exe -log miniALU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source miniALU.tcl
-# Log file           : C:/Users/LENOVO/Documents/Vivado/lab_1/lab_1.runs/synth_1/miniALU.vds
+# Command line       : vivado.exe -log miniALU_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source miniALU_top.tcl
+# Log file           : C:/Users/LENOVO/Documents/Vivado/lab_1/lab_1.runs/synth_1/miniALU_top.vds
 # Journal file       : C:/Users/LENOVO/Documents/Vivado/lab_1/lab_1.runs/synth_1\vivado.jou
 # Running On         : LAPTOP-JAYCEE
 # Platform           : Windows Server 2016 or Windows 10
@@ -19,6 +19,6 @@
 # Host memory        : 16915 MB
 # Swap memory        : 1073 MB
 # Total Virtual      : 17989 MB
-# Available Virtual  : 4084 MB
+# Available Virtual  : 3785 MB
 #-----------------------------------------------------------
-source miniALU.tcl -notrace
+source miniALU_top.tcl -notrace

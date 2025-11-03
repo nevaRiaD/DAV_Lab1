@@ -7,4 +7,4 @@ REM Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 REM Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 REM
 
-vivado -log miniALU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source miniALU.tcl
+vivado -log miniALU_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source miniALU_top.tcl
